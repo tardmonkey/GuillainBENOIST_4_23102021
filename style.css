@@ -91,7 +91,7 @@ a:hover {
 }
 
 .texture-paper::before {
-    background: url("img/texture-paper.png");
+    background: url("img/texture-paper.webp");
     background-size: 280px 280px;
 }
 
@@ -540,6 +540,7 @@ a[data-lightbox]:hover::before {
     content: "+";
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
     font-size: 32px;
+    font-display: swap;
     width: 50px;
     height: 50px;
     margin-left: -25px;
@@ -651,6 +652,7 @@ label,
 a {
     font-family: "helvetica";
     font-weight: 400;
+    font-display: swap;
     color: #575757!important;
 }
 
@@ -677,7 +679,7 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .tight-width-whitespace {
@@ -688,6 +690,7 @@ p {
 .h1 {
     font-size: 20px;
     font-family: "Open Sans";
+    font-display: swap;
 }
 
 .cta-hero {
@@ -704,12 +707,12 @@ p {
     margin: auto auto auto auto;
 }
 
-h2 {
+h3 {
     font-size: 22px;
     line-height: 1.4em;
 }
 
-h3 {
+h2 {
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 700;
@@ -775,12 +778,12 @@ h4 {
 }
 
 .tc-white {
-    color: #F3976C!important;
+    color: #FFF;
 }
 
 .btn-atomic-tangerine {
     background: #F3976C;
-    color: #FFFFFF!important;
+    color: #000!important;
 }
 
 .btn-atomic-tangerine:hover {
@@ -794,6 +797,9 @@ h4 {
 
 .ltc-white:hover {
     color: #cccccc!important;
+}
+.title-agence{
+    color: #F3976C!important;
 }
 
 .ltc-atomic-tangerine {
@@ -810,19 +816,19 @@ h4 {
 }
 
 .bg-dots-bg {
-    background-image: url("img/dots-bg.png");
+    background-image: url("img/dots-bg.webp");
 }
 
 .bg-lines-h2-bg {
-    background-image: url("img/lines-h2-bg.png");
+    background-image: url("img/lines-h2-bg.webp");
 }
 
 .bg-banniere {
-    background-image: url("img/la-chouette-agence-banniere.jpg");
+    background-image: url("img/la-chouette-agence-banniere.webp");
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: url("img/image-de-presentaiton.webp");
 }
 
 @media (max-width: 1024px) {
@@ -1039,4 +1045,76 @@ h4 {
     .bloc-mob-center-text {
         text-align: center;
     }
+}
+
+.screen-reader {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    }
+
+footer ul li a{color:#000000!important;}
+
+footer p {font-size:medium;color:#000000!important;}
+
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .lightbox:target {
+    display: block;
+  }
+  
+  .lightbox div {
+    
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+ /* Images pour effet zoom lightbox */
+    #webp1 div {background-image:url("img/1.webp");}
+    #webp2 div  {background-image:url("img/2.webp");}
+    #webp3 div  {background-image:url("img/3.webp");}
+    #webp4 div  {background-image:url("img/4.webp");}
+
+
+.pXXL{
+    width:65%;
+    font-size:x-large;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    
+}
+
+.pXXL span{
+    font-size:large;
+}
+
+h4{
+    position:relative;
+    z-index:1;
+    color:#FFF!important;
+}
+
+h5{
+    color:#000!important;
+    
 }

@@ -160,7 +160,7 @@ function setUpLightBox() {
 }
 
 function addSwipeSupport() {
-    $(".carousel-inner").length && $(".carousel-inner").swipe({
+    $(".carousel-inner").length && $(".carousel-inner").on("swipe",{
         swipeLeft: function(t, e, i, a, o) {
             $(this).parent().carousel("next")
         },
@@ -178,7 +178,7 @@ function addKeyBoardSupport() {
 }
 
 function addLightBoxSwipeSupport() {
-    $("#lightbox-image").length && $("#lightbox-image").swipe({
+    $("#lightbox-image").length && $("#lightbox-image").on("swipe",{
         swipeLeft: function(t, e, i, a, o) {
             $(".next-lightbox").is(":visible") && $(".next-lightbox").click()
         },
@@ -194,7 +194,7 @@ $(document).ready(function() {
             scrollTop: $("#scroll-hero").closest(".bloc").height()
         }, "slow")
     }), extraNavFuncs(), setUpSpecialNavs(), setUpDropdownSubs(), setUpLightBox(), setUpVisibilityToggle(), addSwipeSupport(), addKeyBoardSupport(), -1 != navigator.userAgent.indexOf("Safari") && -1 == navigator.userAgent.indexOf("Chrome") && $("#page-loading-blocs-notifaction").remove()
-}), $(window).load(function() {
+}), $(window).on('load', function() {
     setFillScreenBlocHeight(), animateWhenVisible(), $("#page-loading-blocs-notifaction").remove()
 }).resize(function() {
     setFillScreenBlocHeight()
