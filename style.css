@@ -754,7 +754,9 @@ h4 {
 .avatar {
     box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.3);
 }
-
+.black{
+    color:#000!important;
+}
 .black-background {
     background-color: rgba(165, 147, 99, 0.7);
     padding: 40px 40px 40px 40px;
@@ -872,6 +874,9 @@ h4 {
 @media (max-width: 991px) {
     .container {
         width: 100%;
+    }
+    .container a img{
+        width:100%;
     }
     .b-parallax {
         background-attachment: scroll;
@@ -1126,13 +1131,34 @@ h5{
     position:relative;
     z-index:1;
 }
-
+#collapseTarget{
+    display:none;
+}
 #form_1{
     margin-bottom:2rem;
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+}
+#form_1 label{
+    font-weight: bolder;
+}
+#form_1 input{
+    border-radius:5px;
+    width :100%;   
     
 }
 
+#form_1 textarea{
+    border-radius:5px;
+    width :100%;
+}
+
 @media (max-width: 1024px){
+    .pXXL{
+        width:100%;
+    }
+    
     #form_1{
         display:flex;
         flex-direction: column;
@@ -1142,5 +1168,25 @@ h5{
         margin:auto;
         padding:2rem;
     }
+
+    .collapse{
+        height:0px;
+        overflow: hidden;
+        transition: all ease 800ms;
+    }
+    #collapseTarget:target + .collapse{
+        
+        height:9rem;
+        
+    }
+   #collapseTarget{
+        
+       padding:0;
+   }
+   #collapseTarget:not(:target){
+    height:0px;
+    overflow: hidden;
+   }
+    
 }
 
