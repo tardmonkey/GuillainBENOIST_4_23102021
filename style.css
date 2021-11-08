@@ -533,7 +533,8 @@ button {
 a[data-lightbox] {
     position: relative;
     display: block;
-    text-align: center;
+    
+   
 }
 
 a[data-lightbox]:hover::before {
@@ -551,8 +552,11 @@ a[data-lightbox]:hover::before {
     z-index: 1;
     position: absolute;
     top: 50%;
+    left:50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
+    display:flex;
+    justify-content: center;
 }
 
 a[data-lightbox]:hover img {
