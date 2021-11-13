@@ -1133,9 +1133,7 @@ h5{
     position:relative;
     z-index:1;
 }
-#collapseTarget{
-    display:none;
-}
+
 #form_1{
     margin-bottom:2rem;
     display:flex;
@@ -1171,21 +1169,22 @@ h5{
         padding:2rem;
     }
 
-    .collapse{
+    #collapse{
         height:0px;
         overflow: hidden;
         transition: all ease 800ms;
+        
     }
-    #collapseTarget:target + .collapse{
+html{
+    scroll-padding-top: 9rem;
+}
+    #collapse:target{
         
         height:9rem;
         
     }
-   #collapseTarget{
-        
-       padding:0;
-   }
-   #collapseTarget:not(:target){
+   
+   #collapse:not(:target){
     height:0px;
     overflow: hidden;
    }
