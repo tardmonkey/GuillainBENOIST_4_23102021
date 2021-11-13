@@ -557,6 +557,7 @@ a[data-lightbox]:hover::before {
     -webkit-transform: translateY(-50%);
     display:flex;
     justify-content: center;
+    align-items:center;
 }
 
 a[data-lightbox]:hover img {
@@ -1193,4 +1194,3 @@ h5{
    }
     
 }
-
