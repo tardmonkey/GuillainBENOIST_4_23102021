@@ -449,6 +449,13 @@ nav .caret {
     margin: 0 5px 5px 0;
 }
 
+nav a:focus{
+    filter:brightness(2.5);
+}
+a:focus{
+    filter:brightness(60%);
+}
+
 .btn.pull-right {
     margin: 0 0 5px 5px;
 }
@@ -565,84 +572,6 @@ a[data-lightbox]:hover img {
     animation-fill-mode: none;
 }
 
-#lightbox-modal {
-    display: flex;
-    align-items: center;
-}
-
-#lightbox-modal .modal-dialog {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto 0;
-}
-
-#lightbox-modal .modal-dialog img {
-    max-height: 90vh;
-    margin: 0 auto;
-}
-
-.lightbox-caption {
-    padding: 20px;
-    color: #FFF;
-    background: rgba(0, 0, 0, .5);
-    position: absolute;
-    left: 15px;
-    right: 15px;
-    bottom: 5px;
-}
-
-.close-lightbox {
-    color: #FFF;
-    font-size: 30px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 20;
-    background: rgba(0, 0, 0, .5);
-    border: none;
-    line-height: 30px;
-    padding: 0 9px 5px;
-    opacity: 0.3;
-}
-
-.close-lightbox:hover,
-.next-lightbox:hover,
-.prev-lightbox:hover {
-    opacity: 1.0;
-    color: #FFF;
-}
-
-.next-lightbox,
-.prev-lightbox {
-    font-size: 20px;
-    color: rgba(255, 255, 255, .9);
-    background: rgba(0, 0, 0, .5);
-    transition: all .2s ease-in-out;
-    position: absolute;
-    top: 45%;
-    z-index: 1;
-    opacity: 0.4;
-}
-
-.next-lightbox {
-    padding: 6px 8px 1px 13px;
-    right: 25px;
-}
-
-.prev-lightbox {
-    padding: 6px 13px 1px 10px;
-    left: 25px;
-}
-
-.snapshot-lb .modal-body {
-    padding-bottom: 45px;
-}
-
-.snapshot-lb .lightbox-caption {
-    padding: 0;
-    color: rgba(0, 0, 0, .5);
-    background: none;
-}
 
 h1,
 h2,
@@ -1087,8 +1016,7 @@ footer p {font-size:medium;color:#000000!important;}
     display: block;
   }
   
-  .lightbox div {
-    
+  .lightbox div { 
     display: block;
     width: 100%;
     height: 100%;
@@ -1096,6 +1024,26 @@ footer p {font-size:medium;color:#000000!important;}
     background-repeat: no-repeat;
     background-size: contain;
   }
+
+.lightbox div:hover::before {
+    content: "x";
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+    font-size: 32px;
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .6);
+    color: #FFF;
+    font-weight: 100;
+    z-index: 1;
+    position: absolute;
+    top: 5rem;
+    right:5rem; 
+    display:flex;
+    justify-content: center;
+    align-content:center;
+}
   
  /* Images pour effet zoom lightbox */
     #webp1 div {background-image:url("img/1.webp");}
@@ -1139,22 +1087,49 @@ h5{
     display:flex;
     flex-direction: column;
     gap:2rem;
+    
 }
+
+
 #form_1 label{
     font-weight: bolder;
 }
 #form_1 input{
-    border-radius:5px;
+    border-radius:10px;
     width :100%;   
-    
 }
-
+#form_1 input:focus{
+    background-color: #f3c1aaf6;
+}
 #form_1 textarea{
-    border-radius:5px;
-    width :100%;
+    border-radius:10px;
+    width: 100%;
+    resize: none;
+}
+#form_1 textarea:focus{
+    background-color: #f3c1aaf6;
 }
 
 @media (max-width: 1024px){
+    .lightbox div:before {
+        content: "x";
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+        font-size: 25px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, .6);
+        color: #FFF;
+        font-weight: 100;
+        z-index: 1;
+        position: absolute;
+        top: 5rem;
+        right:45vw;
+        display:flex;
+        justify-content: center;
+       
+        
+    }
     .pXXL{
         width:100%;
     }
